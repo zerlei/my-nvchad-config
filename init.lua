@@ -5,3 +5,7 @@
 --   pattern = "*",
 --   command = "tabdo wincmd =",
 -- })
+--
+
+-- if set no, vim will change file's birthtime... 
+vim.opt.backupcopy = "yes"
