@@ -107,7 +107,7 @@ M.general = {
         nowait = true,
       },
     },
-  },
+  }
 }
 
 if vim.g.vscode then

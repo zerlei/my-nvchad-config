@@ -37,6 +37,12 @@ local plugins = { -- Override plugin definition options
       require("better_escape").setup()
     end,
   },
+  {
+    "hrsh7th/nvim-cmp",
+    opts = function()
+      return require "custom.configs.cmp"
+    end,
+  }
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
@@ -50,5 +56,4 @@ local plugins = { -- Override plugin definition options
   --   lazy = false,
   -- }
 }
-
 return plugins
