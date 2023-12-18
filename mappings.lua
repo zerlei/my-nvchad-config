@@ -1,6 +1,5 @@
 ---@type MappingsTable
 local M = {}
-
 M.general = {
   n = {
     ["J"] = {
@@ -139,12 +138,12 @@ else
       nowait = true,
     },
   }
-  M.general.n["<a-f>"] = {
-    function()
-      vim.lsp.buf.format { async = true }
-    end,
-    "LSP formatting",
-  }
+  -- M.general.n["<a-f>"] = {
+  --   function()
+  --     vim.lsp.buf.format { async = true }
+  --   end,
+  --   "LSP formatting",
+  -- }
 end
 -- more keybinds!
 
