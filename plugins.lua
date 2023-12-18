@@ -1,6 +1,6 @@
 local overrides = require "custom.configs.overrides"
 
--- NOTE  lazy won't load most plugin in vscode model
+-- NOTE  lazy won't load most plugin in vscode mode. go https://www.lazyvim.org/extras/vscode
 ---@type NvPluginSpec[]
 local plugins = { -- Override plugin definition options
   {
@@ -23,10 +23,6 @@ local plugins = { -- Override plugin definition options
     opts = overrides.mason,
   },
   {
-    "nvim-treesitter/nvim-treesitter",
-    opts = overrides.treesitter,
-  },
-  {
     "nvim-tree/nvim-tree.lua",
     opts = overrides.nvimtree,
   }, -- Install a plugin
@@ -42,8 +38,20 @@ local plugins = { -- Override plugin definition options
     opts = function()
       return require "custom.configs.cmp"
     end,
-  }
-  -- To make a plugin not be loaded
+  }, --  when vscode...
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = overrides.treesitter,
+    enabled = not vim.g.vscode,
+  },
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    enabled = not vim.g.vscode,
+  },
+  {
+    "lewis6991/gitsigns.nvim",
+    enabled = not vim.g.vscode,
+  }, -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
   --   enabled = false
