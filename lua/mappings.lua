@@ -130,6 +130,15 @@ if vim.g.vscode then
       nowait = true,
     },
   }
+  M.general.n["<leader>c"] = {
+    function()
+      vscode.call "workbench.action.closeActiveEditor"
+    end,
+    "vscode close active editor",
+    opts = {
+      nowait = true,
+    },
+  }
 else
   M.general.v["<C-c>"] = {
     '"*y`>',
