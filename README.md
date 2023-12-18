@@ -1,3 +1,12 @@
-# Example_config
+# My Nvim&Vim config
 
-This can be used as an example custom config for NvChad. Do check the https://github.com/NvChad/nvcommunity
+For 5 Mode:
+
+1. NvChad
+2. NvChad+VsCode
+3. No NvChad(only nvim)
+4. No NvChad+VsCode
+5. No Nvim, just vim(like vs ide etc. it only suppurt vim using .vimrc)
+
+
+For Keyboard ShortCuts, go https://zerlei.cn/docs/tech/fastCoding/渐进式学习vim.html
