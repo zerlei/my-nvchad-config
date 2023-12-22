@@ -45,6 +45,10 @@ local plugins = { -- Override plugin definition options
     enabled = not vim.g.vscode,
   },
   {
+    "NvChad/nvterm",
+    opts = overrides.nvterm
+  },
+  {
     "lukas-reineke/indent-blankline.nvim",
     enabled = not vim.g.vscode,
   },
