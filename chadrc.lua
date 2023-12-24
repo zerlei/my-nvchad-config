@@ -17,4 +17,4 @@ M.plugins = "custom.plugins"
 -- check core.mappings for table structure
 M.mappings = require "custom.lua.mappings"
 
-return M 
+return M

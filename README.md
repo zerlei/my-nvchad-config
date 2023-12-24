@@ -9,4 +9,4 @@ For 5 Mode:
 5. No Nvim, just vim(like vs ide etc. it only suppurt vim using .vimrc)
 
 
-For Keyboard ShortCuts, go https://zerlei.cn/docs/tech/fastCoding/渐进式学习vim.html
+go https://zerlei.cn/docs/tech/fastCoding/渐进式学习vim.html

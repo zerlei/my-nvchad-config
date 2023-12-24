@@ -38,7 +38,7 @@ local plugins = { -- Override plugin definition options
     opts = function()
       return require "custom.configs.cmp"
     end,
-  }, --  when vscode...
+  },
   {
     "nvim-treesitter/nvim-treesitter",
     opts = overrides.treesitter,
@@ -46,7 +46,7 @@ local plugins = { -- Override plugin definition options
   },
   {
     "NvChad/nvterm",
-    opts = overrides.nvterm
+    opts = overrides.nvterm,
   },
   {
     "lukas-reineke/indent-blankline.nvim",

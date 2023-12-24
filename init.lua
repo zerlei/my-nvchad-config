@@ -1,13 +1,7 @@
--- local autocmd = vim.api.nvim_create_autocmd
--- Auto resize panes when resizing nvim window
--- autocmd("VimResized", {
---   pattern = "*",
---   command = "tabdo wincmd =",
--- })
+-- Note:  when disabled nvim mouse press shift when use mouse, this help when copy and paste by using ssh.
+-- windows:  press shfit and mouse right click, paster from system, pressing shift mouse select text and <C-c> copy from current text 
 --
---
--- table.print = print_r
-print("current postions:")
+-- print("current postions:")
 if vim.g.nvchad_theme then
   -- print("In nvchad")
 else
@@ -26,6 +20,9 @@ else
 end
 -- if set no, vim will change file's birthtime...
 vim.opt.backupcopy = "yes"
-vim.opt.mousemodel = "extend"
+
+-- vim.opt.mouse = "nvi"
+-- vim.opt.mousemodel = "extend"
 -- vim.inspect for view a table
+-- Note vim.inspect print a table in lua
 -- print(vim.inspect(vim.g.nvchad_theme))
