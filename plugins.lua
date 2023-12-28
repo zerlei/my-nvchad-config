@@ -56,6 +56,10 @@ local plugins = { -- Override plugin definition options
     "lewis6991/gitsigns.nvim",
     enabled = not vim.g.vscode,
   }, -- To make a plugin not be loaded
+  {
+    "folke/which-key.nvim",
+    enabled = false
+  },
   -- {
   --   "NvChad/nvim-colorizer.lua",
   --   enabled = false

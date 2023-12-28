@@ -51,6 +51,10 @@ M.general = {
         nowait = true,
       },
     },
+    ["<leader>"] = {
+      "<Nop>",
+      "Nop space"
+    }
   },
   v = {
     ["J"] = {
@@ -88,6 +92,10 @@ M.general = {
         nowait = true,
       },
     },
+    ["<leader>"] = {
+      "<Nop>",
+      "Nop space"
+    }
   },
   i = {
     ["<c-v>"] = {
@@ -106,7 +114,7 @@ M.general = {
         nowait = true,
       },
     },
-  }
+  },
 }
 
 if vim.g.vscode then
