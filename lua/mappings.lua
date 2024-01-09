@@ -51,6 +51,13 @@ M.general = {
         nowait = true,
       },
     },
+    ["<leader>p"] = {
+      '"*p`]',
+      "<leader>p for paste from system",
+      opts = {
+        nowait = true,
+      },
+    },
     ["<leader>"] = {
       "<Nop>",
       "Nop space"
@@ -95,7 +102,15 @@ M.general = {
     ["<leader>"] = {
       "<Nop>",
       "Nop space"
-    }
+    },
+    ["<leader>y"] = {
+    '"*y`><Esc>',
+    "use <leader>y copy to system",
+    opts = {
+      nowait = true,
+    },
+  }
+
   },
   i = {
     ["<c-v>"] = {
