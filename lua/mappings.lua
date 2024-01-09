@@ -149,7 +149,7 @@ if vim.g.vscode then
   }
 else
   M.general.v["<C-c>"] = {
-    '"*y`>',
+    '"*y`><Esc>',
     "use Ctrl+c copy to system",
     opts = {
       nowait = true,
