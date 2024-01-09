@@ -99,6 +99,13 @@ M.general = {
         nowait = true,
       },
     },
+    ["<leader>p"] = {
+      'd<Esc>"*P`]',
+      "<leader>p for delete current text and paste from system",
+      opts = {
+        nowait = true,
+      },
+    },
     ["<leader>"] = {
       "<Nop>",
       "Nop space"
@@ -139,6 +146,16 @@ if vim.g.vscode then
       vscode.call "bing-search.commandPaletteBingSearch"
     end,
     "vscode bing search",
+    opts = {
+      nowait = true,
+    },
+  }
+
+  M.general.n["<leader>fm"] = {
+    function()
+      vscode.call "editor.action.formatDocument"
+    end,
+    "vscode format",
     opts = {
       nowait = true,
     },
