@@ -86,7 +86,7 @@ M.general = {
       },
     },
     ["<c-v>"] = {
-      'd<Esc>"*p`]',
+      'd<Esc>"*P`]',
       "ctrl+v for delete current text and paste from system",
       opts = {
         nowait = true,
