@@ -11,7 +11,7 @@ else
   -- print("not in nvchad")
   -- must in lua subdir if not won't require success
   local old_path = package.path
-  package.path = "./lua/custom/?.lua;" .. "./?.lua" .. package.path
+  package.path = "./lua/custom/?.lua;" .. "./lua/?.lua;" .. package.path
 
   local mappings = require "mappings"
   package.path = old_path
