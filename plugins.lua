@@ -5,14 +5,6 @@ local overrides = require "custom.configs.overrides"
 local plugins = { -- Override plugin definition options
   {
     "neovim/nvim-lspconfig",
-    dependencies = { -- format & linting
-      {
-        "jose-elias-alvarez/null-ls.nvim",
-        config = function()
-          require "custom.configs.null-ls"
-        end,
-      },
-    },
     config = function()
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
@@ -42,23 +34,22 @@ local plugins = { -- Override plugin definition options
   {
     "nvim-treesitter/nvim-treesitter",
     opts = overrides.treesitter,
-    enabled = not vim.g.vscode,
   },
   {
     "NvChad/nvterm",
     opts = overrides.nvterm,
   },
   {
-    "lukas-reineke/indent-blankline.nvim",
-    enabled = not vim.g.vscode,
-  },
-  {
-    "lewis6991/gitsigns.nvim",
-    enabled = not vim.g.vscode,
-  }, -- To make a plugin not be loaded
-  {
     "folke/which-key.nvim",
     enabled = false
+  },
+  {
+    "stevearc/conform.nvim",
+    --  for users those who want auto-save conform + lazyloading!
+    -- event = "BufWritePre"
+    config = function()
+      require "custom.configs.conform"
+    end,
   },
   -- {
   --   "NvChad/nvim-colorizer.lua",

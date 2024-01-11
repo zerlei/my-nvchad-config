@@ -60,8 +60,8 @@ M.general = {
     },
     ["<leader>"] = {
       "<Nop>",
-      "Nop space"
-    }
+      "Nop space",
+    },
   },
   v = {
     ["J"] = {
@@ -108,16 +108,15 @@ M.general = {
     },
     ["<leader>"] = {
       "<Nop>",
-      "Nop space"
+      "Nop space",
     },
     ["<leader>y"] = {
-    '"*y`><Esc>',
-    "use <leader>y copy to system",
-    opts = {
-      nowait = true,
+      '"*y`><Esc>',
+      "use <leader>y copy to system",
+      opts = {
+        nowait = true,
+      },
     },
-  }
-
   },
   i = {
     ["<c-v>"] = {
@@ -186,6 +185,12 @@ else
     opts = {
       nowait = true,
     },
+  }
+  M.general.n["<leader>fm"] = {
+    function()
+      require("conform").format()
+    end,
+    "formatting",
   }
   -- M.general.n["<a-f>"] = {
   --   function()
