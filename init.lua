@@ -2,7 +2,10 @@
 -- windows:  press shfit and mouse right click, paster from system, pressing shift mouse select text and <C-c> copy from current text
 --
 -- print("current postions:")
+--
+local prefix = ""
 if vim.g.nvchad_theme then
+
   -- print("In nvchad")
 else
   vim.g.mapleader = " "
@@ -12,8 +15,13 @@ else
   -- must in lua subdir if not won't require success
   local old_path = package.path
   package.path = "./lua/custom/lua/?.lua;" .. "./lua/?.lua;" .. package.path
-
-  local mappings = require "mappings"
+  local mappings
+  local _s, _m = pcall(require, "mappings")
+  if _s then
+    mappings = _m
+  else
+    mappings = require "custom.lua.mappings"
+  end
   package.path = old_path
   for mode, mode_values in pairs(mappings.general) do
     for keybind, mapping_info in pairs(mode_values) do
