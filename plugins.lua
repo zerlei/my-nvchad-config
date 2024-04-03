@@ -1,6 +1,5 @@
 local overrides = require "custom.configs.overrides"
 
--- NOTE  lazy won't load most plugin in vscode mode. go https://www.lazyvim.org/extras/vscode
 ---@type NvPluginSpec[]
 local plugins = { -- Override plugin definition options
   {
@@ -68,9 +67,11 @@ local plugins = { -- Override plugin definition options
         },
       }
 
-      vim.keymap.set("n", "<leader>ss", require("auto-session.session-lens").search_session, {
-        noremap = true,
-      })
+      require("core.utils").load_mappings "autosession"
+       -- todo add keymap manager
+      -- vim.keymap.set("n", "<leader>ss", require("auto-session.session-lens").search_session, {
+      --   noremap = true,
+      -- })
     end,
   },
   -- {

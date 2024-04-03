@@ -9,6 +9,14 @@ M.general = {
         nowait = true,
       },
     },
+    ["<C-u>"] = {
+      "<C-r>",
+      "undo undo",
+      opts = {
+        nowait = true,
+        silent = true
+      }
+    },
     ["K"] = {
       "3k",
       "Jump up 3 lines",
@@ -132,6 +140,21 @@ M.general = {
       "y`>",
       "When yanked, move the cursor to the end of the selected text",
       opts = {
+        nowait = true,
+      },
+    },
+  },
+}
+
+M.autosession = {
+  n = {
+    ["<leader>ss"] = {
+      function()
+        require("auto-session.session-lens").search_session()
+      end,
+      "search session",
+      opts = {
+        noremap = true,
         nowait = true,
       },
     },
