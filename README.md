@@ -1,3 +1,5 @@
+For NvChad 2.0 disabled
+
 # My Nvim&Vim config
 
 For 5 Mode:
